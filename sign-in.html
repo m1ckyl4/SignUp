@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script>
+        function validateForm() {
+            let email = document.forms["sign_up"]["email"].value;
+            let password = document.forms["sign_up"]["password"].value;
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Password lenght must be more 8 character ");
+                return false;
+            }
+        }
+    </script>
+
+    <title>Sign up | Sign in</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col-left">
+            <div class="info-left">
+                <div class="text-display">
+                    Welcome! <br> Please sign up to <br> collect art by the world’s <br> leading artists.
+                </div>
+                <!-- <div class="btn-left">
+                    <div class="example"><a href="#">See Example</a></div>
+                    <div class="more"><a href="#">Read More</a></div>
+                </div> -->
+            </div>
+
+        </div>
+        <div class="col-right">
+            <div class="logo">[VAN-GOGH]</div>
+            <div class="text-welcome">Hello, Again</div>
+            <div class="text-detail">Welcome to Sign Up Page</div>
+            <div class="form">
+                <form name="sign_up" action="#" onsubmit="return validateForm()" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Your Name " class="name ">
+                    <input type="email " name="email" id="email" placeholder="Email " class="email ">
+                    <input type="password" name="password" id="password" placeholder="Password " class="password ">
+                    <input type="password" name="password" id="password" placeholder="Confirm Password " class="password ">
+                    <input type="submit" value="Sign Up" class="button ">
+                    <!-- <div class="hr ">- Or -</div>
+                    <div class="btn "><a href="# "><i class='bx bxl-google'></i> Sign Up with Google</a> -->
+                    <!-- </div> -->
+                </form>
+            </div>
+            <div class="text-signin ">You already have an account? Please
+                <a href="sign-in.html">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>
